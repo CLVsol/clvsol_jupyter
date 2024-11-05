@@ -1,3 +1,4 @@
 /jcafb_2025/cadastro/data
 /jcafb_2025/cadastro/.ipynb_checkpoints
 .virtual_documents
+*.pyc
