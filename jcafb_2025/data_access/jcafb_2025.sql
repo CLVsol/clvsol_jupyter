@@ -1,0 +1,13 @@
+BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "host" (
+	"id"	INTEGER,
+	"name"	TEXT NOT NULL,
+	"server"	TEXT NOT NULL,
+	"dbname"	TEXT NOT NULL,
+	"user"	INTEGER NOT NULL,
+	"user_pw"	TEXT NOT NULL,
+	"master_pw"	TEXT,
+	"notes"	TEXT,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+COMMIT;
