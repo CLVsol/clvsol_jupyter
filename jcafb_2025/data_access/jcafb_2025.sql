@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS "clv_patient" (
 	"gender"	TEXT,
 	"birthday"	TEXT,
 	"phase_id"	INTEGER,
+	"phase"	TEXT,
 	"address_name"	TEXT,
 	"street_name"	TEXT,
 	"street"	TEXT,
@@ -14,11 +15,24 @@ CREATE TABLE IF NOT EXISTS "clv_patient" (
 	"street_number2"	TEXT,
 	"zip"	TEXT,
 	"city_id"	INTEGER,
+	"city"	TEXT,
+	"state_id"	INTEGER,
+	"country_state"	TEXT,
 	"country_id"	INTEGER,
+	"country"	TEXT,
 	"mobile"	INTEGER,
 	"email"	INTEGER,
 	"marker_ids"	TEXT,
+	"markers"	TEXT,
 	"ext_id"	INTEGER,
+	PRIMARY KEY("id")
+);
+CREATE TABLE IF NOT EXISTS "clv_patient_marker" (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"name"	TEXT,
+	"description"	TEXT,
+	"color"	INTEGER,
+	"active"	INTEGER,
 	PRIMARY KEY("id")
 );
 CREATE TABLE IF NOT EXISTS "clv_phase" (
